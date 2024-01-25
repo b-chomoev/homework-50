@@ -1,0 +1,91 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <script src="https://unpkg.com/react@18/umd/react.development.js"></script>
+    <script src="https://unpkg.com/react-dom@18/umd/react-dom.development.js"></script>
+    <script src="https://unpkg.com/@babel/standalone/babel.min.js"></script>
+    <link rel="stylesheet" href="2.css">
+    <title>Task-2</title>
+</head>
+<body>
+    <div id="app"></div>
+
+    <script type="text/babel">
+        const Header = () => {
+            return (
+                <header className="header">
+                    <h1>Сборная Кыргызстана по Футболу</h1>
+                </header>
+            )
+        }
+
+        const Sidebar = () => {
+            return (
+                <aside>
+                    <nav>
+                        <ul>
+                            <li><a href="#">О сборной</a></li>
+                            <li><a href="#">Таблица</a></li>
+                            <li><a href="#">Главный тренер</a></li>
+                            <li><a href="#">Контакты</a></li>
+                        </ul>
+                    </nav>
+                </aside>
+            );
+        };
+
+        const Content = () => {
+            return (
+                <main>
+                    <h2>О сборной Кыргызстана</h2>
+                    <p>Национальная сборная, представляющая Кыргызстан на международных турнирах и матчах по футболу.
+                        Управляющая организация — Кыргызский футбольный союз, являющаяся с 1994 года членом АФК и ФИФА,
+                        также член ФАЦА. С апреля 2023 года главным тренером сборной является словацкий тренер Штефан
+                        Таркович. Основной капитан сборной — Валерий Кичин. Домашние матчи проводит на стадионе имени
+                        Долона Омурзакова в Бишкеке, вмещающем 23 тысячи зрителей, и являющимся крупнейшим и главным
+                        стадионом страны.</p>
+                    <p>По состоянию на 20 июля 2023 года, сборная Кыргызстана в рейтинге ФИФА занимает 97-е место[1]
+                        среди 210 стран-членов ФИФА. Наивысшее место этой сборной в рейтинге ФИФА зафиксировано в
+                        апреле 2018 года, когда она занимала 75-е место, и самое низкое место зафиксировано в марте
+                        2013 года, когда сборная занимала 201-е место.</p>
+                    <p>Сборная Кыргызстана ни разу не участвовала на чемпионате мира, а также до недавнего времени не
+                        могла квалифицироваться ни на один Кубок Азии, но в 2018 году смогла пройти квалификацию и
+                        впервые в своей истории вышла на финальный этап Кубка Азии 2019 в ОАЭ. До недавнего времени
+                        являлась одной слабейших сборных в Азии и в мире, но в последние два-три года поднялась на
+                        новый уровень, и стала «сборной-середняком» в азиатском континенте.</p>
+                    <img src="https://upload.wikimedia.org/wikipedia/ru/thumb/9/9c/FFKR.gif/171px-FFKR.gif"
+                         alt="Модный манул: как дикий кот стал иконой стиля!"/>
+                </main>
+            )
+        }
+
+        const Footer = () => {
+            return (
+                <footer>
+                    <p>© 2023 Сборная Кыргызстана</p>
+                </footer>
+            )
+        };
+
+        const Website = () => {
+            return (
+                <div className="container">
+                    <Header/>
+                    <div className="content-container">
+                        <Sidebar/>
+                        <Content/>
+                    </div>
+                    <Footer/>
+                </div>
+            );
+        };
+
+        const container = document.getElementById('app');
+        ReactDOM.createRoot(container).render(<Website/>)
+    </script>
+</body>
+</html>
